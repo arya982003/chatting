@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-repeat: no-repeat;
+  background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700442204.jpg");
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+}
+
+.app {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  color: rgb(176, 230, 249);
+  max-width: 600px;
+  /* border-left: 1px solid beige;
+    border-right: 1px solid bisque; */
+}
+
+.app > .screen {
+  display: none;
+}
+
+.app > .screen.active {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.screen .form {
+  background-repeat: no-repeat;
+  background-image: url("https://img.freepik.com/free-vector/dialogue-chat-clouds-speech-bubble-icon-from-lines-triangles-particle-style-design-low-poly-technology-devices-people-communication-concept-blue-background_587448-471.jpg?w=360");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  width: 80%;
+  max-width: 400px;
+  transform: translate(-50%, -50%);
+}
+
+.screen .form-input {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.screen h2 {
+  margin-bottom: 15px;
+  border-bottom: 4px solid rgb(0, 34, 128);
+  font-size: 25px;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.screen .form-input label {
+  display: block;
+  margin-bottom: 5px;
+}
+.screen .form-input input {
+  width: 80%;
+  margin-bottom: 5px;
+  font-size: 15px;
+  border: 2px solid darkblue;
+  outline: navy;
+}
+
+.screen .form-input button {
+  color: darkblue;
+  background-color: rgb(176, 230, 249);
+  border: 2px solid darkblue;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.chat-screen .header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.chat-screen .logo {
+  font-size: 35px;
+  font-weight: 400;
+  font-family: "Alfa Slab One", cursive;
+}
+
+.chat-screen #exit-chat {
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 139, 0.645);
+  background: transparent;
+  padding: 4px 10px;
+  color: lightblue;
+  font-size: 25px;
+  font-family: "Lilita One", cursive;
+}
+
+.chat-screen .message {
+  width: auto;
+  height: calc(100% - 100px);
+  /* background:url('https://wallpaperaccess.com/full/2224374.jpg'); */
+  background: linear-gradient(rgba(0, 0, 0, 0.278), rgba(0, 0, 0, 0.273)),
+  url('https://w0.peakpx.com/wallpaper/450/783/HD-wallpaper-blue-background-dark-texture-abstract.jpg');
+  /* background: url('https://w0.peakpx.com/wallpaper/450/783/HD-wallpaper-blue-background-dark-texture-abstract.jpg'); */
+  background-size:cover;
+  overflow-y: auto;
+  padding: 10px;
+  animation: slideBackground 10s infinite linear;
+}
+@keyframes slideBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.chat-screen .message .msg {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.chat-screen .message .msg > div {
+  max-width: fit-content;
+  background:rgba(176, 229, 249, 0.718);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.chat-screen .message .my-message {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.chat-screen .message .other-message {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.chat-screen .message .msg .name{
+    font-size: 15px;font-weight: 750;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    margin-bottom: 3px;
+}
+
+.chat-screen .message .msg .text{
+    word-wrap: break-word;
+    color: black;
+}
+
+.chat-screen .message .update{
+    justify-content: center;
+    display: flex;padding: 10px;font-style: italic;
+}
+
+.chat-screen .typebox{
+   height: 40px; width: 100%;display:flex;
+}
+
+.chat-screen .typebox .input{
+    flex: 1;
+    font-size: 13px;
+}
+
+.chat-screen .typebox button{
+    background: rgb(8, 20, 68);color: lightblue;outline: none;
+}
+
